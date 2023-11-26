@@ -1,6 +1,6 @@
 //API Testing
 const express = require('express');
-const Data = require('../models/Data');
+const Data = require('../models/Data.js');
 
 const router = express.Router();
 

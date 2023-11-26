@@ -1,7 +1,7 @@
 const express = require("express");
-const Post = require("../models/Post");
-const User = require("../models/User"); // Import the User model
-const cloudinary = require("../utils/cloudinary");
+const Post = require("../models/Post.js");
+const User = require("../models/User.js"); // Import the User model
+const cloudinary = require("../utils/cloudinary.js");
 
 const router = express.Router();
 

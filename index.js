@@ -1,13 +1,13 @@
 const express = require("express");
 const colors = require("colors");
 const dotenv = require("dotenv");
-const connectDB = require("../backend/config/dbconnection");
-const authRoute = require("../backend/routes/authRoute");
-const usersRoute = require("../backend/routes/usersRoute");
-const postsRoute = require("../backend/routes/postsRoute");
-const categoryRoute = require("../backend/routes/categoryRoute");
+const connectDB = require('../backend/config/dbconnection.js')
+const authRoute = require("../backend/routes/authRoute.js");
+const usersRoute = require("../backend/routes/usersRoute.js");
+const postsRoute = require("../backend/routes/postsRoute.js");
+const categoryRoute = require("../backend/routes/categoryRoute.js");
 
-const userRoute = require("../backend/routes/userData");
+const userRoute = require("../backend/routes/userData.js");
 
 const path = require("path");
 const cors = require("cors");
