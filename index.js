@@ -33,10 +33,10 @@ app.use("/api/posts", postsRoute);
 app.use("/api/categories", categoryRoute);
 app.use("/userData", userRoute);
 
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send("Something broke!");
-});
+// app.use((err, req, res, next) => {
+//   console.error(err.stack);
+//   res.status(500).send("Something broke!");
+// });
 
 // //static file:
 // app.use(express.static(path.join(__dirname, "../frontend/build")));
