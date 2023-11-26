@@ -7,6 +7,8 @@ const usersRoute = require("../backend/routes/usersRoute");
 const postsRoute = require("../backend/routes/postsRoute");
 const categoryRoute = require("../backend/routes/categoryRoute");
 
+const userRoute = require("../backend/routes/userData");
+
 const path = require("path");
 const cors = require("cors");
 
@@ -22,13 +24,14 @@ app.use(cors());
 dotenv.config();
 
 //MongoDB connect:
-connectDB();
+ connectDB();
 
 //routes:
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/posts", postsRoute);
 app.use("/api/categories", categoryRoute);
+app.use("/userData", userRoute);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -55,5 +58,5 @@ const PORT = process.env.PORT || 3000;
 
 //listen:
 app.listen(PORT, () => {
-  console.log(`server listening on port ${PORT} `.bgCyan);
+  console.log(`server listening on port ${PORT}`);
 });
