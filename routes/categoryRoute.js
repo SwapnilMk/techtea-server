@@ -1,5 +1,7 @@
 const express = require("express");
-const Category = require("../models/Category.js");
+const User = require("../models/User");
+const Post = require("../models/Post");
+const Category = require("../models/Category");
 const router = express.Router();
 
 //POST CATEGORY
@@ -15,12 +17,12 @@ router.post("/", async (req, res) => {
 
 //GET CATEGORY
 router.get("/", async (req, res) => {
-  try {
-    const categories = await Category.find()
-    res.status(200).json(categories);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
+    try {
+        const categories = await Category.find()
+      res.status(200).json(categories);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  });
 
 module.exports = router;
