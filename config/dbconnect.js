@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose');
 const colors = require("colors")
 
 
@@ -7,8 +7,9 @@ const connectDB = async () => {
     await mongoose.connect(process.env.MONGO_URL);
     console.log(`Mongo server run on ${mongoose.connection.host}`.bgGreen);
   } catch (error) {
-    console.log(`${error}`.bgRed);
+    console.error(error);
   }
 };
 
-module.exports = connectDB
+module.exports = connectDB;
+
